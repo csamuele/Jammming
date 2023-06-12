@@ -7,11 +7,16 @@
 //Global Styles
 @import 'global';
 
+//Containers
+@import 'containers/Tracklist.scss';
+
 //Components
+@import 'components/Header.scss';
 @import 'components/App.scss';
 @import 'components/Playlist.scss';
 @import 'components/SearchBar.scss';
 @import 'components/SearchResults.scss';
+@import 'components/TrackTable.scss';
 @import 'components/Track.scss';
-@import 'components/Tracklist.scss';
+
 

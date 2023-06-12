@@ -1,0 +1,29 @@
+.SearchBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $text-color;
+    font-size: 1.5rem;
+    
+    input[type="text"] {
+        font-size: inherit;
+        background-color: $background-overlay;
+        border-radius: $border-radius;
+        border: $border-weight solid $accent-color;
+        color: inherit;
+        width: 450px;
+    }
+    input[type="submit"] {
+        margin: 15px 0;
+        background-color: $darker-color;
+        font-size: inherit;
+        color: inherit;
+        border: $border-weight solid $accent-color;
+        border-radius: $border-radius;
+        &:hover{
+            background-color: $light-color;
+            color: $darker-color;
+            border-color: $darker-color;
+        }
+    }
+}

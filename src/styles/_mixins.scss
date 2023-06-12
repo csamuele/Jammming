@@ -1,7 +1,10 @@
 @mixin list {
-    width: 50%;
-    height: 100%;
-    border: 2px solid $text-color;
+    min-width: 385px;
+    max-width: 600px;
+    height: 75vh;
+    border: $border-weight solid $text-color;
     border-radius: $border-radius;
-    background-color: #00000040;
+    background-color: $background-overlay;
+    margin: 20px;
+    flex-grow: 1;
 }

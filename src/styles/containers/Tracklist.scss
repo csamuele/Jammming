@@ -1,0 +1,14 @@
+
+.Tracklist {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.lists-container {
+    margin-top: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

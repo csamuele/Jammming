@@ -1,0 +1,15 @@
+.TrackTable {
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    p {
+        margin: 0;
+    }
+    td, th {
+        text-overflow: ellipsis;
+    }
+
+    .TrackButton {
+        width: 20px;
+    }
+}
