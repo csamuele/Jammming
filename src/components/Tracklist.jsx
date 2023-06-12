@@ -1,5 +1,4 @@
 import React from "react";
-import '../styles/Tracklist.scss';
 
 function Tracklist() {
     return (

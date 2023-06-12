@@ -1,0 +1,17 @@
+//Variables
+@import 'variables';
+
+//Mixins
+@import 'mixins';
+
+//Global Styles
+@import 'global';
+
+//Components
+@import 'components/App.scss';
+@import 'components/Playlist.scss';
+@import 'components/SearchBar.scss';
+@import 'components/SearchResults.scss';
+@import 'components/Track.scss';
+@import 'components/Tracklist.scss';
+
