@@ -1,14 +1,16 @@
 import React from "react";
 
-function Track() {
+
+
+function Track({Title, Artist, Album, id, AddRemove}) {
     return (
-        <tr>
+        <tr key={id}>
             <td className="Artist">
-                <p><strong>100 Years</strong></p>
-                <p>Five For Fighting</p>
+                <p><strong>{Title}</strong></p>
+                <p>{Artist}</p>
             </td>
-            <td className="Album">The Battle for Everything</td>
-            <td className="TrackButton">+</td>
+            <td className="Album">{Album}</td>
+            <td className="TrackButton">{AddRemove}</td>
         </tr>
     )
 };

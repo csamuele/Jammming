@@ -1,6 +1,5 @@
 import Header from './components/Header'
 import Tracklist from './containers/Tracklist';
-import Track from './components/Track';
 
 function App() {
   return (

@@ -1,0 +1,20 @@
+input[type="text"] {
+    font-size: 1.5rem;
+    background-color: $background-overlay;
+    border-radius: $border-radius;
+    border: $border-weight solid $accent-color;
+    color: $text-color;
+}
+input[type="submit"] {
+    margin: 15px 0;
+    background-color: $darker-color;
+    font-size: 1.5rem;
+    color: $text-color;
+    border: $border-weight solid $accent-color;
+    border-radius: $border-radius;
+    &:hover{
+        background-color: $light-color;
+        color: $darker-color;
+        border-color: $darker-color;
+    }
+}

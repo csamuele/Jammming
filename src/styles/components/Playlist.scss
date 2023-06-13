@@ -1,3 +1,6 @@
 .Playlist {
     @include list;
+    input[type="text"] {
+        margin: 10px;
+    }
 }

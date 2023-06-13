@@ -1,11 +1,14 @@
 import React from "react";
 import TrackTable from "./TrackTable";
-function Playlist() {
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMinus } from "@fortawesome/free-solid-svg-icons";
+function Playlist({songArray}) {
     return (
-        <div className="Playlist">
-            <h2>Playlist</h2>
-            <TrackTable/>
-        </div>
+        <form className="Playlist">
+            <input type="text" placeholder="Playlist Name"/>
+            <TrackTable AddRemove={<FontAwesomeIcon icon={faMinus}/>} songArray={songArray}/>
+            <input type="submit" value="Save to Spotify"/>
+        </form>
     )
 };
 

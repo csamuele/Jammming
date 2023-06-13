@@ -1,9 +1,13 @@
 import TrackTable from "./TrackTable";
-function SearchResults() {
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
+
+function SearchResults({songArray}) {
+
     return (
         <div className="SearchResults">
         <h2>Results</h2>
-        <TrackTable/>
+        <TrackTable AddRemove={<FontAwesomeIcon icon={faPlus}/>} songArray={songArray}/>
     </div>
     )
 };
