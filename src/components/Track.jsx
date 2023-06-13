@@ -2,15 +2,16 @@ import React from "react";
 
 
 
-function Track({Title, Artist, Album, id, AddRemove}) {
+function Track(props) {
+    const track = props.track;
     return (
-        <tr key={id}>
+        <tr key={track.id}>
             <td className="Artist">
-                <p><strong>{Title}</strong></p>
-                <p>{Artist}</p>
+                <p><strong>{track.title}</strong></p>
+                <p>{track.artist}</p>
             </td>
-            <td className="Album">{Album}</td>
-            <td className="TrackButton">{AddRemove}</td>
+            <td className="Album">{track.album}</td>
+            <td className="TrackButton">{props.addRemove}</td>
         </tr>
     )
 };
