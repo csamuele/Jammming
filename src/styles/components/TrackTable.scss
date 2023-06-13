@@ -13,5 +13,12 @@
 
     .TrackButton {
         width: 20px;
+        
+    }
+    button {
+        background-color: transparent;
+        border: none;
+        color: $text-color;
+        cursor: pointer;
     }
 }

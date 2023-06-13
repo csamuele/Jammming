@@ -27,18 +27,18 @@ import Spotify from '../util/Spotify';
 //         id: 3
 //     }
 // ]
-const playlist = [
-    {
-        title: "All My Loving",
-        artist: "The Welll Pennies",
-        album: "Covers",
-        id: 4
-    }
-]
+// const playlist = [
+//     {
+//         title: "All My Loving",
+//         artist: "The Welll Pennies",
+//         album: "Covers",
+//         id: 4
+//     }
+// ]
 
 function Tracklist() {
     const [resultTracks, setResultTracks] = useState([]);
-    const [playlistTracks, setPlaylistTracks] = useState(playlist);
+    const [playlistTracks, setPlaylistTracks] = useState([]);
 
     const handleAdd = (track) => {
         if (!playlistTracks.some(playlistTrack => track.id === playlistTrack.id)) {
@@ -53,13 +53,17 @@ function Tracklist() {
         const results = await Spotify.search(term);
         setResultTracks(results);
     }
-
+    const handleSave = async (name) => {
+        const trackUris = playlistTracks.map(playlistTrack => playlistTrack.uri);
+        Spotify.createPlaylist(name, trackUris);
+        setPlaylistTracks([]);
+    }
     return (
         <div className='Tracklist'>
             <SearchBar onSearch={handleSearch}/>
             <div className='lists-container'>
                 <SearchResults songArray={resultTracks} onAdd={handleAdd}/>
-                <Playlist songArray={playlistTracks} onRemove={handleRemove}/>
+                <Playlist songArray={playlistTracks} onRemove={handleRemove} onSave={handleSave}/>
             </div>
         </div>
     )
