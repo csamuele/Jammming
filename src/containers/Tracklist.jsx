@@ -39,11 +39,17 @@ function Tracklist() {
     const [resultTracks, setResultTracks] = useState(results);
     const [playlistTracks, setPlaylistTracks] = useState(playlist);
 
+    const handleAdd = (track) => {
+        if (!playlistTracks.some(playlistTrack => track.id === playlistTrack.id)) {
+            setPlaylistTracks([...playlistTracks, track]);
+        };
+    };
+
     return (
         <div className='Tracklist'>
             <SearchBar />
             <div className='lists-container'>
-                <SearchResults songArray={resultTracks}/>
+                <SearchResults songArray={resultTracks} onAdd={handleAdd}/>
                 <Playlist songArray={playlistTracks}/>
             </div>
         </div>

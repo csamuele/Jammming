@@ -6,15 +6,18 @@ import React from "react";
 
 function Track(props) {
     const track = props.track;
+    const handleAdd = (event) => {
+        props.onAdd(track);
+    }
     const AddRemove = () => {
         if(props.isAdd) {
-            return <button><FontAwesomeIcon icon={faPlus}/></button> 
+            return <button onClick={handleAdd}><FontAwesomeIcon icon={faPlus}/></button> 
         } else {
             return <button><FontAwesomeIcon icon={faMinus} /></button>
         }
     }
     return (
-        <tr key={track.id}>
+        <tr>
             <td className="Artist">
                 <p><strong>{track.title}</strong></p>
                 <p>{track.artist}</p>
