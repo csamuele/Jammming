@@ -3,6 +3,7 @@ Use spotify API to search songs and create playlists
 ## Technologies used
 React.js
 Sass
+FontAwesome
 ## Features
 Users can search for songs by song title, artist's name, album name, or genre
 
