@@ -45,12 +45,16 @@ function Tracklist() {
         };
     };
 
+    const handleRemove = (track) => {
+        setPlaylistTracks(playlistTracks.filter(playlistTrack => track.id !== playlistTrack.id))
+    }
+
     return (
         <div className='Tracklist'>
             <SearchBar />
             <div className='lists-container'>
                 <SearchResults songArray={resultTracks} onAdd={handleAdd}/>
-                <Playlist songArray={playlistTracks}/>
+                <Playlist songArray={playlistTracks} onRemove={handleRemove}/>
             </div>
         </div>
     )

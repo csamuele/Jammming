@@ -9,11 +9,14 @@ function Track(props) {
     const handleAdd = (event) => {
         props.onAdd(track);
     }
+    const handleRemove = (event) => {
+        props.onRemove(track);
+    }
     const AddRemove = () => {
         if(props.isAdd) {
             return <button onClick={handleAdd}><FontAwesomeIcon icon={faPlus}/></button> 
         } else {
-            return <button><FontAwesomeIcon icon={faMinus} /></button>
+            return <button onClick={handleRemove}><FontAwesomeIcon icon={faMinus} /></button>
         }
     }
     return (
