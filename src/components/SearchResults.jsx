@@ -7,7 +7,7 @@ function SearchResults({songArray}) {
     return (
         <div className="SearchResults">
         <h2>Results</h2>
-        <TrackTable AddRemove={<FontAwesomeIcon icon={faPlus}/>} songArray={songArray}/>
+        <TrackTable isAdd={true} songArray={songArray}/>
     </div>
     )
 };

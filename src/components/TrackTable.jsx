@@ -1,10 +1,10 @@
 import Track from "./Track";
 
 
-function TrackTable({ AddRemove, songArray }) {
+function TrackTable({ isAdd, songArray }) {
 
     const tracks = songArray.map(song => {
-        return <Track track={song} addRemove={AddRemove}/>
+        return <Track track={song} isAdd={isAdd}/>
     })
     return (
         <table className="TrackTable">
